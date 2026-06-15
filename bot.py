@@ -10,7 +10,7 @@ st.title("🏫 Coconut Groove😋 - AI Assistant🤖")
 # dont input your api input it while deploying in seperate .toml file
 HF_TOKEN = st.secrets["HF_TOKEN"]
 
-MODEL_ID = "meta-llama/Llama-3.2-3B-Instruct"
+MODEL_ID = "meta-llama/Llama-3-7b-instruct"
 hf_client = InferenceClient(model=MODEL_ID, token=HF_TOKEN)
 
 @st.cache_resource

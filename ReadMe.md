@@ -21,7 +21,7 @@ If a question is **outside the provided hotel data**, the assistant politely red
 ## 🚀 Key Features
 
 ### 💬 Conversational AI
-- Powered by **Meta LLaMA 3.2 – 3B Instruct**
+- Powered by **Meta LLaMA 3 – 7B Instruct**
 - Context-aware responses using hotel documentation
 
 ### 🎤 Voice Input Support
@@ -85,10 +85,10 @@ Sets branding and layout for the chatbot UI.
 
 ### 2️⃣ Model Initialization
 ```python
-MODEL_ID = "meta-llama/Llama-3.2-3B-Instruct"
+MODEL_ID = "meta-llama/Llama-3-7b-instruct"
 hf_client = InferenceClient(model=MODEL_ID, token=HF_TOKEN)
 ```
-- Uses Hugging Face’s hosted **LLaMA 3.2**
+- Uses Hugging Face’s hosted **LLaMA 3 – 7B Instruct**
 - Requires `HF_TOKEN` stored securely in Streamlit secrets
 
 ---
