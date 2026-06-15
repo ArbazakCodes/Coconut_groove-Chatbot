@@ -7,10 +7,12 @@ import docx2txt
 
 st.set_page_config(page_title="Coconut Groove", layout="wide")
 st.title("🏫 Coconut Groove😋 - AI Assistant🤖")
-# dont input your api input it while deploying in seperate .toml file
+
+# SECURITY WARNING: Do not hardcode secrets. 
+# Use st.secrets["HF_TOKEN"] when deploying to production!
 HF_TOKEN = st.secrets["HF_TOKEN"]
 
-MODEL_ID = "meta-llama/Llama-3-7b-instruct"
+MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
 hf_client = InferenceClient(model=MODEL_ID, token=HF_TOKEN)
 
 @st.cache_resource
@@ -115,4 +117,6 @@ if user_query:
             st.write(answer)
             st.session_state.messages.append({"role": "assistant", "content": answer})
 
-    st.rerun()
+    st.rerun() # Keep this one inside the conditional block
+
+# Global st.rerun() removed from here!
