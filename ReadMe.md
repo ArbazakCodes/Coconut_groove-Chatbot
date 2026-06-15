@@ -1,13 +1,13 @@
-# 🏫 Kolachi 😋 – AI Hotel Assistant 🤖
+# 🏫 Coconut Groove 😋 – AI Hotel Assistant 🤖
 
-An **AI-powered hotel chatbot** built using **Streamlit**, **Hugging Face LLaMA 3**, and **Speech Recognition**, designed specifically for **Kolachi Hotel**.  
+An **AI-powered hotel chatbot** built using **Streamlit**, **Hugging Face LLaMA 3**, and **Speech Recognition**, designed specifically for **Coconut Groove Hotel**.  
 The chatbot provides **accurate hotel-related responses** using a private knowledge base (`HotelData.docx`) and supports **both text and voice interaction**.
 
 ---
 
 ## 📌 Project Overview
 
-**Kolachi AI Assistant** is a conversational chatbot that:
+**Coconut Groove AI Assistant** is a conversational chatbot that:
 - Answers guest queries related to hotel services, menu, rules, and policies
 - Uses **hotel-specific data** as context
 - Supports **voice input (speech-to-text)**
@@ -21,7 +21,7 @@ If a question is **outside the provided hotel data**, the assistant politely red
 ## 🚀 Key Features
 
 ### 💬 Conversational AI
-- Powered by **Meta LLaMA 3 – 7B Instruct**
+- Powered by **Qwen2.5 – 7B Instruct**
 - Context-aware responses using hotel documentation
 
 ### 🎤 Voice Input Support
@@ -51,7 +51,7 @@ same audio
 | Component | Technology |
 |---------|-----------|
 | Frontend | Streamlit |
-| LLM | Meta LLaMA 3.2 (3B Instruct) |
+| LLM | Qwen 2.5 (7B Instruct) |
 | API | Hugging Face Inference Client |
 | Speech Recognition | Google Speech API (via `speech_recognition`) |
 | File Parsing | docx2txt |
@@ -76,8 +76,8 @@ ChatBot_Hotel/
 
 ### 1️⃣ Page Configuration
 ```python
-st.set_page_config(page_title="Kolachi", layout="wide")
-st.title("🏫 Kolachi😋 - AI Assistant🤖")
+st.set_page_config(page_title="Coconut Groove", layout="wide")
+st.title("🏫 Coconut Groove😋 - AI Assistant🤖")
 ```
 Sets branding and layout for the chatbot UI.
 
@@ -85,17 +85,17 @@ Sets branding and layout for the chatbot UI.
 
 ### 2️⃣ Model Initialization
 ```python
-MODEL_ID = "meta-llama/Llama-3-7b-instruct"
+MODEL_ID = "Qwen/Qwen2.5-7b-instruct"
 hf_client = InferenceClient(model=MODEL_ID, token=HF_TOKEN)
 ```
-- Uses Hugging Face’s hosted **LLaMA 3 – 7B Instruct**
+- Uses Hugging Face’s hosted **Qwen 2.5 – 7B Instruct**
 - Requires `HF_TOKEN` stored securely in Streamlit secrets
 
 ---
 
 ## 👨‍💼 Managed By
-**Kolachi Hotel**  
-AI Assistant supervised by **Raja**
+**Coconut Groove Hotel**  
+AI Assistant supervised by **Arbaz Khan**
 
 ---
 
